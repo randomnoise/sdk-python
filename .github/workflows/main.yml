@@ -31,7 +31,7 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Install dependencies
         run: |
-          pip install coverage
+          pip install pytest-cov
           make package-install
       - name: Run tests
         run: make test

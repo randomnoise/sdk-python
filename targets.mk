@@ -29,7 +29,7 @@ package-install: ## install the package without dev dependencies
 	pip install -e .
 
 test: ## run tests quickly with the default Python
-	coverage run -m pytest -vv
+	pytest -m unit -vv --cov=./ --cov-report=xml
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist
